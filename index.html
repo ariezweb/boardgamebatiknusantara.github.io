@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Library wajib MindAR (Jangan diubah) -->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <!-- BAGIAN 1: Ganti 'targets.mind' sesuai nama file .mind Anda -->
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
+      <!-- BAGIAN 2: Daftarkan semua file 3D (.glb) dan audio (.mp3) Anda di sini -->
+      <a-assets>
+        <!-- Model 3D (.glb) -->
+        <a-asset-item id="model-sumatrautara" src="./sumatrautara.glb"></a-asset-item>
+        <a-asset-item id="model-jawatengah" src="./jawatengah.glb"></a-asset-item>
+        <a-asset-item id="model-sulawesiselatan" src="./sulawesiselatan.glb"></a-asset-item>
+        <a-asset-item id="model-aceh" src="./aceh.glb"></a-asset-item>
+        <a-asset-item id="model-kalimantantimur" src="./kalimantantimur.glb"></a-asset-item>
+        <a-asset-item id="model-papua" src="./papua.glb"></a-asset-item>
+        <a-asset-item id="model-maluku" src="./maluku.glb"></a-asset-item>
+        <a-asset-item id="model-gorontalo" src="./gorontalo.glb"></a-asset-item>
+        <a-asset-item id="model-bali" src="./bali.glb"></a-asset-item>
+        <a-asset-item id="model-riau" src="./riau.glb"></a-asset-item>
+        <a-asset-item id="model-jambi" src="./jambi.glb"></a-asset-item>
+        <a-asset-item id="model-bangkabelitung" src="./bangkabelitung.glb"></a-asset-item>
+        <a-asset-item id="model-bengkulu" src="./bengkulu.glb"></a-asset-item>
+        <a-asset-item id="model-lampung" src="./lampung.glb"></a-asset-item>
+        <a-asset-item id="model-jakarta" src="./jakarta.glb"></a-asset-item>
+        <a-asset-item id="model-jawabarat" src="./jawabarat.glb"></a-asset-item>
+        <a-asset-item id="model-banten" src="./banten.glb"></a-asset-item>
+        <a-asset-item id="model-diyogyakarta" src="./diyogyakarta.glb"></a-asset-item>
+        <a-asset-item id="model-jawatimur" src="./jawatimur.glb"></a-asset-item>
+        <a-asset-item id="model-ntb" src="./ntb.glb"></a-asset-item>
+
+        <!-- Audio (.mp3) -->
+        <audio id="audio-sumatrautara" src="./sumatrautara.mp3" preload="auto"></audio>
+        <audio id="audio-jawatengah" src="./jawatengah.mp3" preload="auto"></audio>
+        <audio id="audio-sulawesiselatan" src="./sulawesiselatan.mp3" preload="auto"></audio>
+        <audio id="audio-aceh" src="./aceh.mp3" preload="auto"></audio>
+        <audio id="audio-kalimantantimur" src="./kalimantantimur.mp3" preload="auto"></audio>
+        <audio id="audio-papua" src="./papua.mp3" preload="auto"></audio>
+        <audio id="audio-maluku" src="./maluku.mp3" preload="auto"></audio>
+        <audio id="audio-gorontalo" src="./gorontalo.mp3" preload="auto"></audio>
+        <audio id="audio-bali" src="./bali.mp3" preload="auto"></audio>
+        <audio id="audio-riau" src="./riau.mp3" preload="auto"></audio>
+        <audio id="audio-jambi" src="./jambi.mp3" preload="auto"></audio>
+        <audio id="audio-bangkabelitung" src="./bangkabelitung.mp3" preload="auto"></audio>
+        <audio id="audio-bengkulu" src="./bengkulu.mp3" preload="auto"></audio>
+        <audio id="audio-lampung" src="./lampung.mp3" preload="auto"></audio>
+        <audio id="audio-jakarta" src="./jakarta.mp3" preload="auto"></audio>
+        <audio id="audio-jawabarat" src="./jawabarat.mp3" preload="auto"></audio>
+        <audio id="audio-banten" src="./banten.mp3" preload="auto"></audio>
+        <audio id="audio-diyogyakarta" src="./diyogyakarta.mp3" preload="auto"></audio>
+        <audio id="audio-jawatimur" src="./jawatimur.mp3" preload="auto"></audio>
+        <audio id="audio-ntb" src="./ntb.mp3" preload="auto"></audio>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <!-- BAGIAN 3: Pasangkan urutan kartu dengan model 3D dan audio-nya -->
+      
+      <!-- KARTU KE-1 (Index 0) -> Muncul sumatrautara -->
+      <a-entity mindar-image-target="targetIndex: 0" data-audio="audio-sumatrautara">
+        <a-gltf-model src="#model-sumatrautara" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1" data-audio="audio-jawatengah">
+        <a-gltf-model src="#model-jawatengah" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 2" data-audio="audio-sulawesiselatan">
+        <a-gltf-model src="#model-sulawesiselatan" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 3" data-audio="audio-aceh">
+        <a-gltf-model src="#model-aceh" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 4" data-audio="audio-kalimantantimur">
+        <a-gltf-model src="#model-kalimantantimur" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 5" data-audio="audio-papua">
+        <a-gltf-model src="#model-papua" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 6" data-audio="audio-maluku">
+        <a-gltf-model src="#model-maluku" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 7" data-audio="audio-gorontalo">
+        <a-gltf-model src="#model-gorontalo" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 8" data-audio="audio-bali">
+        <a-gltf-model src="#model-bali" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 9" data-audio="audio-riau">
+        <a-gltf-model src="#model-riau" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 10" data-audio="audio-jambi">
+        <a-gltf-model src="#model-jambi" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 11" data-audio="audio-bangkabelitung">
+        <a-gltf-model src="#model-bangkabelitung" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 12" data-audio="audio-bengkulu">
+        <a-gltf-model src="#model-bengkulu" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 13" data-audio="audio-lampung">
+        <a-gltf-model src="#model-lampung" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 14" data-audio="audio-jakarta">
+        <a-gltf-model src="#model-jakarta" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 15" data-audio="audio-jawabarat">
+        <a-gltf-model src="#model-jawabarat" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 16" data-audio="audio-banten">
+        <a-gltf-model src="#model-banten" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 17" data-audio="audio-diyogyakarta">
+        <a-gltf-model src="#model-diyogyakarta" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 18" data-audio="audio-jawatimur">
+        <a-gltf-model src="#model-jawatimur" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 19" data-audio="audio-ntb">
+        <a-gltf-model src="#model-ntb" position="0 0 0" scale="3 3 3" rotation="-90 180 0"></a-gltf-model>
+      </a-entity>
+      
+    </a-scene>
+
+    <!-- BAGIAN 4: Script untuk memutar suara saat marker terdeteksi -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const allAudios = document.querySelectorAll("audio");
+        const targets = document.querySelectorAll("[mindar-image-target]");
+
+        // Buka izin audio di browser saat pengguna pertama kali menyentuh/klik layar
+        const unlockAudio = () => {
+          allAudios.forEach((audio) => {
+            audio.play().then(() => {
+              audio.pause();
+              audio.currentTime = 0;
+            }).catch(() => {});
+          });
+          document.removeEventListener("touchstart", unlockAudio);
+          document.removeEventListener("click", unlockAudio);
+        };
+        document.addEventListener("touchstart", unlockAudio);
+        document.addEventListener("click", unlockAudio);
+
+        // Putar audio sesuai marker yang discan dan hentikan saat marker hilang
+        targets.forEach((target) => {
+          const audioId = target.getAttribute("data-audio");
+          const audioEl = document.getElementById(audioId);
+
+          target.addEventListener("targetFound", () => {
+            // Hentikan audio lain yang sedang berbunyi agar tidak bertumpuk
+            allAudios.forEach((a) => {
+              if (a !== audioEl) {
+                a.pause();
+                a.currentTime = 0;
+              }
+            });
+
+            if (audioEl) {
+              audioEl.currentTime = 0;
+              audioEl.play().catch((err) => {
+                console.warn("Audio gagal diputar otomatis:", err);
+              });
+            }
+          });
+
+          target.addEventListener("targetLost", () => {
+            if (audioEl) {
+              audioEl.pause();
+              audioEl.currentTime = 0;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
